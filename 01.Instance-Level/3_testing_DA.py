@@ -23,7 +23,7 @@ parser.add_argument(
     "--type",
     help="what's the type of the model",
     default="fea",
-    choices=['fea', 'obj', 'sol']
+    choices=['fea', 'obj']
 )
 parser.add_argument("--gpu", help="gpu index", default="0")
 parser.add_argument("--model_key", default=None)
@@ -168,7 +168,7 @@ def create_batch_data(conFeatures, edgIndices, edgFeatures, varFeatures, labels,
             batch_edge_indices.append(sample_edge_indices)
             
             # Collect labels
-            batch_labels.append(labels[var_start:var_end])
+            batch_labels.append(labels[i])
         
         # Convert lists to tensors, maintaining batch dimension
         batch_cons_tensor = torch.stack(batch_cons, dim=0)
