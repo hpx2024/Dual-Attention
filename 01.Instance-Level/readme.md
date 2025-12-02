@@ -39,7 +39,7 @@ python 3_testing_DA.py --exp_env 2 --model_key data-env1-foldable-randFeat-fea
 ## Step 3: Train and Test the Model for MILP Objective Value
 
 ```
-python 2_training_DA.py --type obj --data 1000 --epoch 12000 --data_path data-env1/unfoldable --embSize 64
+python 2_training_DA.py --type obj --data 1000 --epoch 12000 --data_path data-env1/foldable-randFeat --embSize 64
 python 3_testing_DA.py --exp_env 2 --model_key data-env1-foldable-randFeat-obj --type obj
 ```
 

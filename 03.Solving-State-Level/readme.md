@@ -31,7 +31,7 @@ python -u 2_generate_il_samples.py ufacilities -j 8
 
 ```
 python -u 3_train_il_DA.py setcover -g 0
-python -u 3_train_il_DA.py cauctions -g 0
+python -u 3_train_il_DA.py cauctions -g 0  
 python -u 3_train_il_DA.py indset -g 0
 python -u 3_train_il_DA.py ufacilities -g 0
 ```

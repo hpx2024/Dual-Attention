@@ -13,15 +13,26 @@ To execute the above code, you need to create an additional environment for the 
 
 ```
 conda create -n ecole_env python=3.9
+conda activate ecole_env
+
 conda install -c conda-forge ecole
 conda install -c conda-forge ecole pyscipopt
 ```
+
+If you run the code with the error message 'ImportError: libscip. so. 8.0: cannot open shared object file: No such file or directory', you need to run the following code to restrict scip to version 8.0.4
+```
+conda install scip=8.0.4
+```
+
 
 For the remaining codes, you need to run them in an environment with the following dependencies:
 - Python 3.12.2
 - gurobipy 12.0.1
 - pytorch 2.4.1
 
+```
+conda create -n ecole_env python=3.12
+```
 
 ## 1.2 Collect solutions
 
