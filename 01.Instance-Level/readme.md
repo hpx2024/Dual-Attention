@@ -1,6 +1,6 @@
 # Environment Setup
 To run this code, you will need the following dependencies:
-- Python 3.12.3
+- Python 3.11.9
 - pytorch 2.5.1
 - pandas 2.3.2
 - pyscipopt 4.4.0

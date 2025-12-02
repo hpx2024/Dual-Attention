@@ -31,8 +31,11 @@ For the remaining codes, you need to run them in an environment with the followi
 - pytorch 2.4.1
 
 ```
-conda create -n ecole_env python=3.12
+conda create -n DAB-Element python=3.12
+conda activate 
 ```
+
+
 
 ## 1.2 Collect solutions
 
