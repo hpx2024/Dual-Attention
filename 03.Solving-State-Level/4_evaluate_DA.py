@@ -115,7 +115,7 @@ if __name__ == "__main__":
                 # Load trained weights based on training method
                 model = Dual_Attention(embSize, nConsF, nEdgeF, nVarF, n_layers, n_heads, d_model, d_k, d_v, d_ff).to(device)
                 if policy['name'] == 'il':
-                    model.load_state_dict(torch.load(f'GT/{args.problem}/0/il.pkl'))
+                    model.load_state_dict(torch.load(f'DA/{args.problem}/0/il.pkl'))
                 else:
                     raise Exception(f"Unrecognized policy {policy['name']}")
                 model.eval()
