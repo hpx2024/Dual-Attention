@@ -207,7 +207,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     dataDir = args.dataDir
-    taskName = args.taskName
 
     INS_DIR = os.path.join(dataDir,'ins')
     BG_DIR = os.path.join(dataDir,'bg')

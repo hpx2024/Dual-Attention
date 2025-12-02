@@ -108,7 +108,7 @@ if __name__ == '__main__':
     parser.add_argument('--nWorkers', type=int, default=20,help='number of processes to solve distinct instances in parallel')
     parser.add_argument('--maxTime', type=int, default=3600,help='time limit of the solving process')
     parser.add_argument('--maxStoredSol', type=int, default=10,help='max number of solutions to store')
-    parser.add_argument('--threads', type=int, default=1,help='number of theads used to solve a single instance')
+    parser.add_argument('--threads', type=int, default=1,help='number of threads used to solve a single instance')
 
     args = parser.parse_args()
 

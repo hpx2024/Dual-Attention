@@ -200,7 +200,7 @@ if __name__ == "__main__":
         # Stagger process starts to avoid CPU congestion (except last worker)
         if i < N_WORKERS - 1:
             print(f"Started worker {i+1}/{N_WORKERS}, waiting 30s before next...")
-            time.sleep(15)  # 延时防止CPU拥挤
+            time.sleep(15)
 
     # Wait for all processes to complete
     for p in ps:

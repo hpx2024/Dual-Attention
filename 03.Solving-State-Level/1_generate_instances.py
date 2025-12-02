@@ -199,11 +199,11 @@ def generate_setcover(nrows, ncols, density, filename, rng, max_coef=100):
     nnzrs = int(nrows * ncols * density)
 
     assert nnzrs >= nrows  # at least 1 col per row
-    assert nnzrs >= 2 * ncols  # at leats 2 rows per col
+    assert nnzrs >= 2 * ncols  # at least 2 rows per col
 
     # compute number of rows per column
     indices = rng.choice(ncols, size=nnzrs)  # random column indexes
-    indices[:2 * ncols] = np.repeat(np.arange(ncols), 2)  # force at leats 2 rows per col
+    indices[:2 * ncols] = np.repeat(np.arange(ncols), 2)  # force at least 2 rows per col
     _, col_nrows = np.unique(indices, return_counts=True)
 
     # for each column, sample random rows

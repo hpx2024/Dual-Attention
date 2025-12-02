@@ -49,4 +49,4 @@ if __name__ == '__main__':
     generate_is_instances(output_dir,'IS',100)
 
     # Report total elapsed time
-    print(f"耗时：{time.time() - start:.4f} 秒")
+    print(f"Elapsed time: {time.time() - start:.4f} seconds")

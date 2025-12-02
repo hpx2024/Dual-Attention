@@ -245,7 +245,7 @@ if __name__ == "__main__":
             wandb.log({'valid_loss':valid_loss, 'valid_entropy':entropy}, step = epoch)
             wandb.log({f'valid_acc@{k}':acc for k, acc in zip(top_k, valid_kacc)}, step = epoch)
 
-        # Learning rate scheduling and early stoppin
+        # Learning rate scheduling and early stopping
         scheduler.step(valid_loss)
         if scheduler.num_bad_epochs == 0:
             torch.save(policy.state_dict(), pathlib.Path(running_dir)/'il.pkl')

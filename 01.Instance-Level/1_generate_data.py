@@ -481,7 +481,7 @@ if exp_env == 1:
     combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env1_unfoldable", False), "./data-env1/unfoldable")
     combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env1_unfoldable", False), "./data-env1/unfoldable")
 
-    # Generate and combine unfoldable instances
+    # Generate and combine foldable instances
     generateMILPfoldable(1000, (m, n, nnz, exp_env), "./data-MILPs/")
     combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env1_foldable", False), "./data-env1/foldable")
     combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env1_foldable", False), "./data-env1/foldable")

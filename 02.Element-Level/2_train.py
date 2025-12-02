@@ -15,7 +15,7 @@ from config import *
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
 
-# Augument of this script
+# Argument of this script
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='IP',choices=['IP','WA','IS','CA'])
 args = parser.parse_args()
@@ -118,9 +118,6 @@ def EnergyWeightNorm(task):
         return -100000
 
 def train(predict, data_loader, optimizer=None, weight_norm=1):
-    """
-    这个函数处理一个完整的训练或验证周期，具体取决于是否提供了优化器。
-    """
 
     # Set model mode based on whether optimizer is provided
     if optimizer:

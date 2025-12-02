@@ -83,7 +83,7 @@ for step, filpath in enumerate(file_pathList):
     if TaskName == "IP":
         variable_features = postion_get(variable_features)
     
-    # 3.Prepare edge features
+    # 4.Prepare edge features
     edge_indices = A._indices()
     edge_features = A._values().unsqueeze(1)
     edge_features = torch.ones(edge_features.shape)
@@ -93,7 +93,7 @@ for step, filpath in enumerate(file_pathList):
     edge_features = edge_features.unsqueeze(0)
     variable_features = variable_features.unsqueeze(0)
 
-    # 4.Run model inference
+    # 5.Run model inference
     try:
         with torch.no_grad():
             output = policy(
