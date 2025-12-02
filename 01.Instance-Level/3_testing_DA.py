@@ -131,7 +131,7 @@ else:
     dataset_type = "foldable"
 
 output_file = f"{timestamp}_{type}_{dataset_type}_test_results.csv"
-output_dir = f"./results/GT/{type}"
+output_dir = f"./results/DA/{type}"
 os.makedirs(output_dir,exist_ok=True)
 results = []
 
