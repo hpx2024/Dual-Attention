@@ -3,11 +3,12 @@ To run this code, you will need the following dependencies:
 - Python 3.12.3
 - pytorch 2.5.1
 - pandas 2.3.2
+- pyscipopt 4.4.0
 
 You can create the environment using the commands below:
 ```
-conda create -n DAB-Intance
-conda activate DAB-Intance
+conda create -n DAB-Instance
+conda activate DAB-Instance
 
 conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia
 conda install conda-forge::pandas
