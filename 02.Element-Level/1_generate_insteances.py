@@ -3,12 +3,11 @@ import os
 from ecole.instance import IndependentSetGenerator, CombinatorialAuctionGenerator
 import time
 
-def generate_ca_instances(output_dir,task_name,num):
+def generate_ca_instances(output_dir,num):
 
     # Create output directory if it doesn't exist
-    full_output_dir = os.path.join(output_dir, task_name)
-    if not os.path.exists(full_output_dir):
-        os.makedirs(full_output_dir)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     # Initialize Combinatorial Auction generator
     generator = CombinatorialAuctionGenerator(n_items=8000, n_bids=3000, min_value=1, max_value=100)
@@ -16,14 +15,13 @@ def generate_ca_instances(output_dir,task_name,num):
     # Generate and save instances
     for i in range(num):
         instance = next(generator)
-        instance.write_problem(os.path.join(full_output_dir, f"combinatorial-auction-{i:04}.lp"))
+        instance.write_problem(os.path.join(output_dir, f"combinatorial-auction-{i:04}.lp"))
 
-def generate_is_instances(output_dir,task_name,num):
+def generate_is_instances(output_dir,num):
 
     # Create output directory if it doesn't exist
-    full_output_dir = os.path.join(output_dir, task_name)
-    if not os.path.exists(full_output_dir):
-        os.makedirs(full_output_dir)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     # Initialize Independent Set generator
     generator = IndependentSetGenerator(n_nodes=3000, edge_probability=0.1)
@@ -31,7 +29,7 @@ def generate_is_instances(output_dir,task_name,num):
     # Generate and save instances
     for i in range(num):
         instance = next(generator)
-        instance.write_problem(os.path.join(full_output_dir, f"independent-set-{i:04}.lp"))
+        instance.write_problem(os.path.join(output_dir, f"independent-set-{i:04}.lp"))
 
 if __name__ == '__main__':
     # Record start time
@@ -39,14 +37,12 @@ if __name__ == '__main__':
     print(f"Start time: {start:.4f} seconds")
 
     # Generate training instances
-    output_dir = "./instance/train"
-    generate_ca_instances(output_dir,'CA',400)
-    generate_is_instances(output_dir,'IS',400)
+    generate_ca_instances(os.path.join("./instance", "CA", "train", "ins"), 400)
+    generate_is_instances(os.path.join("./instance", "IS", "train", "ins"), 400)
 
     # Generate testing instances
-    output_dir = "./instance/test"
-    generate_ca_instances(output_dir,'CA',100)
-    generate_is_instances(output_dir,'IS',100)
+    generate_ca_instances(os.path.join("./instance", "CA", "test", "ins"), 100)
+    generate_is_instances(os.path.join("./instance", "IS", "test", "ins"), 100)
 
     # Report total elapsed time
     print(f"Elapsed time: {time.time() - start:.4f} seconds")

@@ -23,15 +23,15 @@ args = parser.parse_args()
 TaskName = args.dataset
 
 # Create directory structure for saving models and logs
-os.makedirs("./results",exist_ok=True)
-os.makedirs(f"./results{TaskName}/",exist_ok=True)
-os.makedirs(f"./results{TaskName}/train_logs/",exist_ok=True)
+os.makedirs("./results/",exist_ok=True)
+os.makedirs(f"./results/{TaskName}/",exist_ok=True)
+os.makedirs(f"./results/{TaskName}/train_logs/",exist_ok=True)
 
 
 current_time = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
 
-model_save_path = f'./results{TaskName}/'
-log_save_path = f"./results{TaskName}/train_logs/"
+model_save_path = f'./results/{TaskName}/'
+log_save_path = f"./results/{TaskName}/train_logs/"
 log_file = open(
                 f'{log_save_path}/-{current_time}_train.log', 'wb'
             ) 
@@ -47,7 +47,7 @@ PRT_FREQUENCY = 1
 # Set device
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-info = confInfo[f"PS_{TaskName}"]
+info = confInfo[f"{TaskName}"]
 DIR_SOL = os.path.join(info['trainDir'],'sol')
 DIR_BG = os.path.join(info['trainDir'],'bg')
 

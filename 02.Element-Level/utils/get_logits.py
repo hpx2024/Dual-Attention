@@ -22,7 +22,7 @@ args = parser.parse_args()
 TaskName = args.dataset
 
 # Set up directories
-EXP_NAME = os.path.join(TaskName,"eval_logs")
+EXP_NAME = os.path.join("results",TaskName,"eval_logs")
 TEST_INS = os.path.join(f"./datasets/{TaskName}/test",'ins')
 
 if TaskName == "IP":

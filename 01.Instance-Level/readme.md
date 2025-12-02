@@ -24,21 +24,21 @@ cd 01.Instance-Level
 
 ## Step 1: Generate data
 
-```
+```bash
 python 1_generate_data.py --exp_env 1
 python 1_generate_data.py --exp_env 2
 ```
 
 ## Step 2: Train and Test the Model for MILP Feasibility
 
-```
+```bash
 python 2_training_DA.py --type fea --data 1000 --epoch 10000 --data_path data-env1/foldable-randFeat --embSize 64
 python 3_testing_DA.py --exp_env 2 --model_key data-env1-foldable-randFeat-fea
 ```
 
 ## Step 3: Train and Test the Model for MILP Objective Value
 
-```
+```bash
 python 2_training_DA.py --type obj --data 1000 --epoch 12000 --data_path data-env1/foldable-randFeat --embSize 64
 python 3_testing_DA.py --exp_env 2 --model_key data-env1-foldable-randFeat-obj --type obj
 ```

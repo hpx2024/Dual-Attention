@@ -170,12 +170,12 @@ if __name__ == '__main__':
         ps.append(p)
 
     # Monitor process status periodically
-    start_time = time.time()
-    while any(p.is_alive() for p in ps):
-        time.sleep(10)
-        alive_count = sum(1 for p in ps if p.is_alive())
-        elapsed = time.time() - start_time
-        print(f"Status check: {alive_count} workers alive, elapsed time: {elapsed:.1f}s")
+    # start_time = time.time()
+    # while any(p.is_alive() for p in ps):
+    #     time.sleep(10)
+    #     alive_count = sum(1 for p in ps if p.is_alive())
+    #     elapsed = time.time() - start_time
+    #     print(f"Status check: {alive_count} workers alive, elapsed time: {elapsed:.1f}s")
 
     # Wait for all processes to complete
     for p in ps:
