@@ -69,10 +69,10 @@ n_Vars_small = 20
 n_Eles_small = 60 if "data-env1-unfoldable" in args.model_key else 12
 # Collect all models matching the specified key
 exp_list = []
-for model_name in os.listdir("./saved-models/GT-1003"):
+for model_name in os.listdir("./saved-models/DA"):
     if args.model_key not in model_name:
         continue
-    model_path = "./saved-models/GT-1003/" + model_name
+    model_path = "./saved-models/DA/" + model_name
     # Extract embedding size from model filename
     embSize = int(model_name[:-4].split('-')[-1][1:])
     # Extract number of samples used for training

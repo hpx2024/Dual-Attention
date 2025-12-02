@@ -4,6 +4,19 @@ To run this code, you need the following dependencies:
 - pytorch 2.5.1
 - pandas 2.3.2
 
+You can refer to the following methods to create the current code environment
+```
+conda create -n DAB-Intance
+conda activate DAB-Intance
+conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install conda-forge::pandas
+conda install conda-forge::pyscipopt
+conda install conda-forge::tqdm
+pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
+
+cd 01.Instance-Level
+```
+
 
 # Reproduce steps
 
@@ -12,7 +25,6 @@ To run this code, you need the following dependencies:
 ```
 python 1_generate_data.py --exp_env 1
 python 1_generate_data.py --exp_env 2
-
 ```
 
 ## Step 2: Training a model for the feasibility or  of MILP.

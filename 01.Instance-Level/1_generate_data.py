@@ -491,16 +491,16 @@ if exp_env == 1:
 elif exp_env == 2:
     rd.seed(3) 
     # Environment 2: Similar to Environment 1, but utilises a different random seed for testing purposes.
-    if not os.path.exists("./data-env4"):
-        os.mkdir("./data-env4")
+    if not os.path.exists("./data-env2"):
+        os.mkdir("./data-env2")
 
     generateMILPunfoldable(1000, (m, n, nnz, exp_env), "./data-MILPs/")
-    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env4_unfoldable", False), "./data-env4/unfoldable")
-    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env4_unfoldable", False), "./data-env4/unfoldable")
+    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env2_unfoldable", False), "./data-env2/unfoldable")
+    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env2_unfoldable", False), "./data-env2/unfoldable")
 
     generateMILPfoldable(1000, (m, n, nnz, exp_env), "./data-MILPs/")
-    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env4_foldable", False), "./data-env4/foldable")
-    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env4_foldable", False), "./data-env4/foldable")
-    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env4_foldable", True), "./data-env4/foldable-randFeat")
-    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env4_foldable", True), "./data-env4/foldable-randFeat")
+    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env2_foldable", False), "./data-env2/foldable")
+    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env2_foldable", False), "./data-env2/foldable")
+    combineGraphsAll(0, 1000, (m, n, "./data-MILPs/MIP_env2_foldable", True), "./data-env2/foldable-randFeat")
+    combineGraphsFeas(0, 1000, (m, n, "./data-MILPs/MIP_env2_foldable", True), "./data-env2/foldable-randFeat")
 

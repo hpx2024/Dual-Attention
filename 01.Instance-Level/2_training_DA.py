@@ -126,13 +126,13 @@ embSize = int(args.embSize)
 # Create directories for saving models
 if not os.path.exists('./saved-models/'):
     os.mkdir('./saved-models/')
-if not os.path.exists('./saved-models/GT/'):
-    os.mkdir('./saved-models/GT/')
+if not os.path.exists('./saved-models/DA/'):
+    os.mkdir('./saved-models/DA/')
 model_setting = trainfolder.replace('/', '-')
 
 # Create directories for saving models
 model_path = (
-    './saved-models/GT/' +
+    './saved-models/DA/' +
     model_setting +
     '-' + args.type +
     '-d' + str(n_Samples) +
