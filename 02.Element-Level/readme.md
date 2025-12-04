@@ -70,7 +70,7 @@ python utils/collect_sols.py --dataDir ./datasets/WA/train --nWorkers 5 --maxTim
 ```
 
 
-## 1.4 Collect Bipartite Graph
+## 1.4 Collect Raw Features
 
 This section extracts the raw features of instance, which will be used as input for the model.
 
@@ -97,7 +97,7 @@ python 2_train.py --dataset IS
 
 The following steps evaluate the trained models on different downstream tasks.
 
-## 3.1 Collect Raw features
+## 3.1 Collect Predicted Solutions
 
 Use the trained models to generate predictions for each dataset. These predictions will be used to guide solvers.
 
