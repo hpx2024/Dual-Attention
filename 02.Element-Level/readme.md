@@ -44,7 +44,7 @@ The remaining scripts require an environment with the following dependencies:
 You can create the environment as follows (Gurobi must be activated):
 
 ```bash
-conda create -n DAB-Element python=3.12
+conda create -n DAB-Element python=3.12.2
 conda activate DAB-Element
 
 conda install gurobi::gurobi==12.0.1
@@ -97,7 +97,7 @@ python 2_train.py --dataset IS
 
 The following steps evaluate the trained models on different downstream tasks.
 
-## 3.1 Collect Predicted Solutions
+## 3.1 Collect Raw features
 
 Use the trained models to generate predictions for each dataset. These predictions will be used to guide solvers.
 
