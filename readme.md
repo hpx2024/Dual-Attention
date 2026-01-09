@@ -25,10 +25,10 @@ This repository introduces an attention-driven neural model that learns richer r
 
 If you find our work helpful, please cite:
 ```bibtex
-@article{huang2025general,
+@article{huang2026general,
   title={A General Neural Backbone for Mixed-Integer Linear Optimization via Dual Attention},
   author={Huang, Peixin and Wu, Yaoxin and Ma, Yining and Wu, Cathy and Song, Wen and Zhang, Wei},
   journal={arXiv preprint arXiv:2601.04509},
-  year={2025}
+  year={2026}
 }
 ```
