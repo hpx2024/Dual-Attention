@@ -21,6 +21,43 @@ This repository introduces an attention-driven neural model that learns richer r
 
 - State-of-the-Art Performance: Extensive experiments on widely-used benchmarks demonstrate consistent improvements over existing baselines, establishing our attention-based model as a powerful foundation for learning-enhanced MILP optimization.
 
+## Usage
+
+This repository is organized into three main tasks, corresponding to the three levels of MILP solving:
+
+### Repository Structure
+```
+Dual-Attention-Backbone/
+├── 01.Instance-Level/
+├── 02.Element-Level/
+├── 03.Solving-State-Level/
+└── img/
+```
+
+### Quick Start
+
+Each task directory contains:
+- Data generation scripts
+- Training scripts
+- Evaluation scripts
+- Task-specific readme with detailed instructions
+
+To reproduce results for any task:
+
+1. Navigate to the task directory:
+```bash
+   cd 01.Instance-Level  # or 02.Element-Level, 03.Solving-State-Level
+```
+
+2. Follow the task-specific readme for:
+   - Environment setup
+   - Dataset generation
+   - Model training
+   - Evaluation
+
+For detailed instructions, please refer to the readme in each task directory.
+
+
 ## Citation
 
 If you find our work helpful, please cite:
