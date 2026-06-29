@@ -1,6 +1,8 @@
 # A General Neural Backbone for Mixed-Integer Linear Optimization via Dual Attention
 
-This repository provides the official implementation of our paper: ["A General Neural Backbone for Mixed-Integer Linear Optimization via Dual Attention"](https://arxiv.org/abs/2601.04509)
+This repository provides the official implementation of our ICML 2026 paper: ["A General Neural Backbone for Mixed-Integer Linear Optimization via Dual Attention"](https://arxiv.org/abs/2601.04509)
+
+Accepted by the 43rd International Conference on Machine Learning (ICML 2026).
 
 ![Model Overview](img/overview.png)
 
@@ -28,10 +30,10 @@ This repository is organized into three main tasks, corresponding to the three l
 ### Repository Structure
 ```
 Dual-Attention-Backbone/
-├── 01.Instance-Level/
-├── 02.Element-Level/
-├── 03.Solving-State-Level/
-└── img/
+|-- 01.Instance-Level/
+|-- 02.Element-Level/
+|-- 03.Solving-State-Level/
+`-- img/
 ```
 
 ### Quick Start
@@ -62,10 +64,10 @@ For detailed instructions, please refer to the readme in each task directory.
 
 If you find our work helpful, please cite:
 ```bibtex
-@article{huang2026general,
+@inproceedings{huang2026general,
   title={A General Neural Backbone for Mixed-Integer Linear Optimization via Dual Attention},
-  author={Huang, Peixin and Wu, Yaoxin and Ma, Yining and Wu, Cathy and Song, Wen and Zhang, Wei},
-  journal={arXiv preprint arXiv:2601.04509},
+  author={Huang, Peixin and Wu, Yaoxin and Ma, Yining and Wu, Cathy and Zhang, Wei and Song, Wen},
+  booktitle={Proceedings of the 43rd International Conference on Machine Learning},
   year={2026}
 }
 ```
